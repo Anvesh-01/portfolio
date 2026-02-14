@@ -1,7 +1,12 @@
+'use client';
+
 import Image from 'next/image';
 import ThemeToggle from './components/ThemeToggle';
+import { useState } from 'react';
 
 export default function Home() {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
   return (
     <div className="min-h-screen bg-linear-to-br from-gray-50 via-slate-100 to-gray-200 dark:from-black dark:via-gray-950 dark:to-black relative overflow-hidden">
       {/* Video Background */}
@@ -32,6 +37,8 @@ export default function Home() {
           <h1 className="text-2xl font-bold bg-linear-to-r from-slate-700 to-slate-900 dark:from-cyan-400 dark:to-blue-400 bg-clip-text text-transparent hover:scale-110 hover:from-slate-800 hover:to-black dark:hover:from-cyan-300 dark:hover:to-blue-300 transition-all duration-300 cursor-pointer drop-shadow-lg">
             AK
           </h1>
+          
+          {/* Desktop Menu */}
           <div className="hidden md:flex gap-8 text-sm font-semibold">
             <a 
               href="#about" 
@@ -42,36 +49,80 @@ export default function Home() {
             </a>
             <a 
               href="#skills" 
-              className="relative text-zinc-700 dark:text-zinc-300 hover:text-slate-700 dark:hover:text-slate-400 transition-all duration-300 hover:scale-125 hover:-translate-y-1 group"
+              className="relative text-zinc-700 dark:text-zinc-300 hover:text-purple-600 dark:hover:text-purple-400 transition-all duration-300 hover:scale-125 hover:-translate-y-1 group"
             >
               <span className="relative z-10">Skills</span>
-              <span className="absolute inset-x-0 -bottom-1 h-0.5 bg-linear-to-r from-slate-700 to-slate-900 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span>
+              <span className="absolute inset-x-0 -bottom-1 h-0.5 bg-linear-to-r from-purple-600 to-purple-800 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span>
             </a>
             <a 
               href="#projects" 
-              className="relative text-zinc-700 dark:text-zinc-300 hover:text-slate-700 dark:hover:text-slate-400 transition-all duration-300 hover:scale-125 hover:-translate-y-1 group"
+              className="relative text-zinc-700 dark:text-zinc-300 hover:text-purple-600 dark:hover:text-purple-400 transition-all duration-300 hover:scale-125 hover:-translate-y-1 group"
             >
               <span className="relative z-10">Projects</span>
-              <span className="absolute inset-x-0 -bottom-1 h-0.5 bg-linear-to-r from-slate-700 to-slate-900 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span>
+              <span className="absolute inset-x-0 -bottom-1 h-0.5 bg-linear-to-r from-purple-600 to-purple-800 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span>
             </a>
             <ThemeToggle />
             <a 
               href="#contact" 
-              className="px-6 py-2 bg-linear-to-r from-slate-700 to-slate-900 text-white rounded-full hover:from-slate-800 hover:to-black hover:scale-110 hover:-translate-y-1 transition-all duration-300 shadow-lg shadow-slate-500/40 hover:shadow-xl hover:shadow-slate-500/60">
-            
+              className="px-6 py-2 bg-linear-to-r from-purple-600 to-purple-800 text-white rounded-full hover:from-purple-700 hover:to-purple-900 hover:scale-110 hover:-translate-y-1 transition-all duration-300 shadow-lg shadow-purple-500/40 hover:shadow-xl hover:shadow-purple-500/60">
               Contact
             </a>
           </div>
+          
           {/* Mobile Menu */}
           <div className="md:hidden flex items-center gap-4">
             <ThemeToggle />
-            <a 
-              href="#contact" 
-              className="px-4 py-2 bg-linear-to-r from-slate-700 to-slate-900 text-white rounded-full text-sm font-semibold hover:from-slate-800 hover:to-black transition-all duration-300 shadow-lg">
-              Contact
-            </a>
+            <button
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              className="text-zinc-700 dark:text-zinc-300 hover:text-purple-600 dark:hover:text-purple-400 transition-colors duration-300"
+              aria-label="Toggle menu"
+            >
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                {mobileMenuOpen ? (
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                ) : (
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+                )}
+              </svg>
+            </button>
           </div>
         </div>
+        
+        {/* Mobile Dropdown Menu */}
+        {mobileMenuOpen && (
+          <div className="md:hidden bg-white/95 dark:bg-black/95 backdrop-blur-xl border-t border-slate-200/60 dark:border-slate-700/40 shadow-xl">
+            <div className="px-6 py-4 space-y-3">
+              <a 
+                href="#about" 
+                onClick={() => setMobileMenuOpen(false)}
+                className="block text-zinc-700 dark:text-zinc-300 hover:text-purple-600 dark:hover:text-purple-400 font-semibold transition-colors duration-300 py-2"
+              >
+                About
+              </a>
+              <a 
+                href="#skills" 
+                onClick={() => setMobileMenuOpen(false)}
+                className="block text-zinc-700 dark:text-zinc-300 hover:text-purple-600 dark:hover:text-purple-400 font-semibold transition-colors duration-300 py-2"
+              >
+                Skills
+              </a>
+              <a 
+                href="#projects" 
+                onClick={() => setMobileMenuOpen(false)}
+                className="block text-zinc-700 dark:text-zinc-300 hover:text-purple-600 dark:hover:text-purple-400 font-semibold transition-colors duration-300 py-2"
+              >
+                Projects
+              </a>
+              <a 
+                href="#contact" 
+                onClick={() => setMobileMenuOpen(false)}
+                className="block px-6 py-2 bg-linear-to-r from-purple-600 to-purple-800 text-white rounded-full text-center font-semibold hover:from-purple-700 hover:to-purple-900 transition-all duration-300 shadow-lg shadow-purple-500/40"
+              >
+                Contact
+              </a>
+            </div>
+          </div>
+        )}
       </nav>
 
       {/* Hero Section */}
@@ -113,7 +164,7 @@ export default function Home() {
                   height={400} 
                   className="rounded-full object-cover w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 border-4 border-cyan-400/50 dark:border-cyan-500/60 shadow-2xl shadow-cyan-400/60 dark:shadow-cyan-500/80 hover:shadow-cyan-500/90 dark:hover:shadow-cyan-400/90 hover:scale-105 hover:rotate-3 transition-all duration-500 cursor-pointer"
                 />
-                <div className="absolute inset-0 rounded-full bg-linear-to-br from-cyan-400/20 to-blue-500/20 dark:from-cyan-500/25 dark:to-blue-400/25 group-hover:from-cyan-400/30 group-hover:to-blue-500/30 dark:group-hover:from-cyan-500/35 dark:group-hover:to-blue-400/35 transition-all duration-500"></div>
+                <div className="absolute inset-0 rounded-full bg-linear-to-br from-cyan-400/5 to-blue-500/5 dark:from-cyan-500/8 dark:to-blue-400/8 group-hover:from-cyan-400/10 group-hover:to-blue-500/10 dark:group-hover:from-cyan-500/12 dark:group-hover:to-blue-400/12 transition-all duration-500"></div>
               </div>
             </div>
           </div>
