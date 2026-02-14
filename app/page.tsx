@@ -29,10 +29,10 @@ export default function Home() {
       {/* Navigation */}
       <nav className="fixed top-0 w-full bg-white/90 dark:bg-black/90 backdrop-blur-xl z-50 border-b border-slate-200/60 dark:border-slate-700/40 shadow-2xl shadow-slate-500/20 dark:shadow-slate-900/40">
         <div className="max-w-6xl mx-auto px-6 py-5 flex justify-between items-center">
-          <h1 className="text-2xl font-bold bg-linear-to-r from-slate-700 to-slate-900 bg-clip-text text-transparent hover:scale-110 hover:from-slate-800 hover:to-black transition-all duration-300 cursor-pointer drop-shadow-lg">
+          <h1 className="text-2xl font-bold bg-linear-to-r from-slate-700 to-slate-900 dark:from-cyan-400 dark:to-blue-400 bg-clip-text text-transparent hover:scale-110 hover:from-slate-800 hover:to-black dark:hover:from-cyan-300 dark:hover:to-blue-300 transition-all duration-300 cursor-pointer drop-shadow-lg">
             AK
           </h1>
-          <div className="flex gap-8 text-sm font-semibold">
+          <div className="hidden md:flex gap-8 text-sm font-semibold">
             <a 
               href="#about" 
               className="relative text-zinc-700 dark:text-zinc-300 hover:text-purple-600 dark:hover:text-purple-400 transition-all duration-300 hover:scale-125 hover:-translate-y-1 group"
@@ -62,6 +62,15 @@ export default function Home() {
               Contact
             </a>
           </div>
+          {/* Mobile Menu */}
+          <div className="md:hidden flex items-center gap-4">
+            <ThemeToggle />
+            <a 
+              href="#contact" 
+              className="px-4 py-2 bg-linear-to-r from-slate-700 to-slate-900 text-white rounded-full text-sm font-semibold hover:from-slate-800 hover:to-black transition-all duration-300 shadow-lg">
+              Contact
+            </a>
+          </div>
         </div>
       </nav>
 
@@ -75,7 +84,7 @@ export default function Home() {
                 Hello, my name is
               </p>
               <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-zinc-900 dark:text-zinc-100 mb-6 animate-slide-up">
-                <span className="bg-linear-to-r from-slate-700 via-slate-800 to-slate-900 bg-clip-text text-transparent hover:from-slate-800 hover:via-slate-900 hover:to-black transition-all duration-300 cursor-pointer">Anvesh Rahul AK</span>
+                <span className="bg-linear-to-r from-slate-700 via-slate-800 to-slate-900 dark:from-cyan-400 dark:via-blue-300 dark:to-purple-400 bg-clip-text text-transparent hover:from-slate-800 hover:via-slate-900 hover:to-black dark:hover:from-cyan-300 dark:hover:via-blue-200 dark:hover:to-purple-300 transition-all duration-300 cursor-pointer">Anvesh Rahul AK</span>
               </h1>
               <p className="text-2xl md:text-3xl text-zinc-600 dark:text-zinc-400 mb-8 animate-slide-up-delay-1 hover:text-slate-700 dark:hover:text-slate-400 transition-colors duration-300 font-semibold">
                 Full Stack Developer & AI Systems Builder
@@ -102,9 +111,9 @@ export default function Home() {
                   alt="Anvesh Rahul AK" 
                   width={400} 
                   height={400} 
-                  className="rounded-full object-cover w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 border-4 border-slate-400 dark:border-slate-600 shadow-2xl shadow-slate-500/50 hover:shadow-slate-600/80 hover:scale-105 hover:rotate-3 transition-all duration-500 cursor-pointer"
+                  className="rounded-full object-cover w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 border-4 border-cyan-400/50 dark:border-cyan-500/60 shadow-2xl shadow-cyan-400/60 dark:shadow-cyan-500/80 hover:shadow-cyan-500/90 dark:hover:shadow-cyan-400/90 hover:scale-105 hover:rotate-3 transition-all duration-500 cursor-pointer"
                 />
-                <div className="absolute inset-0 rounded-full bg-linear-to-br from-slate-600/20 to-slate-800/20 group-hover:from-slate-600/30 group-hover:to-slate-800/30 transition-all duration-500"></div>
+                <div className="absolute inset-0 rounded-full bg-linear-to-br from-cyan-400/20 to-blue-500/20 dark:from-cyan-500/25 dark:to-blue-400/25 group-hover:from-cyan-400/30 group-hover:to-blue-500/30 dark:group-hover:from-cyan-500/35 dark:group-hover:to-blue-400/35 transition-all duration-500"></div>
               </div>
             </div>
           </div>
@@ -133,24 +142,24 @@ export default function Home() {
             <div className="group p-8 rounded-2xl border-2 border-slate-200/50 dark:border-slate-500/30 hover:border-slate-500 dark:hover:border-slate-400 transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-slate-500/40 hover:-translate-y-3 bg-linear-to-br from-white/90 to-slate-50/90 dark:from-black/90 dark:to-gray-950/60 backdrop-blur-sm">
               <h3 className="text-2xl font-bold text-zinc-900 dark:text-zinc-100 mb-6 group-hover:text-slate-700 dark:group-hover:text-slate-400 transition-colors duration-300">Frontend & Real-Time Systems</h3>
               <ul className="space-y-3 text-zinc-600 dark:text-zinc-400">
-                <li className="flex items-center gap-2 hover:text-slate-700 dark:hover:text-slate-400 transition-all duration-300 hover:translate-x-3 cursor-pointer group/item">
-                  <span className="w-1.5 h-1.5 rounded-full bg-slate-700 group-hover/item:scale-150 transition-transform"></span>
+                <li className="flex items-center gap-2 hover:text-purple-600 dark:hover:text-purple-400 transition-all duration-300 hover:translate-x-3 cursor-pointer group/item">
+                  <span className="w-1.5 h-1.5 rounded-full bg-purple-600 group-hover/item:scale-150 transition-transform"></span>
                   Next.js
                 </li>
-                <li className="flex items-center gap-2 hover:text-slate-700 dark:hover:text-slate-400 transition-all duration-300 hover:translate-x-3 cursor-pointer group/item">
-                  <span className="w-1.5 h-1.5 rounded-full bg-slate-700 group-hover/item:scale-150 transition-transform"></span>
+                <li className="flex items-center gap-2 hover:text-purple-600 dark:hover:text-purple-400 transition-all duration-300 hover:translate-x-3 cursor-pointer group/item">
+                  <span className="w-1.5 h-1.5 rounded-full bg-purple-600 group-hover/item:scale-150 transition-transform"></span>
                   React.js & TypeScript
                 </li>
-                <li className="flex items-center gap-2 hover:text-slate-700 dark:hover:text-slate-400 transition-all duration-300 hover:translate-x-3 cursor-pointer group/item">
-                  <span className="w-1.5 h-1.5 rounded-full bg-slate-700 group-hover/item:scale-150 transition-transform"></span>
+                <li className="flex items-center gap-2 hover:text-purple-600 dark:hover:text-purple-400 transition-all duration-300 hover:translate-x-3 cursor-pointer group/item">
+                  <span className="w-1.5 h-1.5 rounded-full bg-purple-600 group-hover/item:scale-150 transition-transform"></span>
                   Tailwind CSS
                 </li>
-                <li className="flex items-center gap-2 hover:text-slate-700 dark:hover:text-slate-400 transition-all duration-300 hover:translate-x-3 cursor-pointer group/item">
-                  <span className="w-1.5 h-1.5 rounded-full bg-slate-700 group-hover/item:scale-150 transition-transform"></span>
+                <li className="flex items-center gap-2 hover:text-purple-600 dark:hover:text-purple-400 transition-all duration-300 hover:translate-x-3 cursor-pointer group/item">
+                  <span className="w-1.5 h-1.5 rounded-full bg-purple-600 group-hover/item:scale-150 transition-transform"></span>
                   WebRTC
                 </li>
-                <li className="flex items-center gap-2 hover:text-slate-700 dark:hover:text-slate-400 transition-all duration-300 hover:translate-x-3 cursor-pointer group/item">
-                  <span className="w-1.5 h-1.5 rounded-full bg-slate-700 group-hover/item:scale-150 transition-transform"></span>
+                <li className="flex items-center gap-2 hover:text-purple-600 dark:hover:text-purple-400 transition-all duration-300 hover:translate-x-3 cursor-pointer group/item">
+                  <span className="w-1.5 h-1.5 rounded-full bg-purple-600 group-hover/item:scale-150 transition-transform"></span>
                   Dynamic, event-driven UI updates
                 </li>
               </ul>
@@ -209,6 +218,94 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Education & Certifications Section */}
+      <section id="education" className="py-20 px-6 relative z-10 bg-linear-to-br from-white/60 via-slate-50/60 to-white/60 dark:from-black/60 dark:via-gray-950/40 dark:to-black/60 backdrop-blur-sm shadow-xl shadow-slate-500/10 dark:shadow-slate-900/30">
+        <div className="flex justify-center mb-16">
+      <h2 className="text-5xl font-bold text-zinc-900 dark:text-zinc-100 text-center hover:scale-110 transition-all duration-300 cursor-pointer hover:text-transparent hover:bg-linear-to-r hover:from-purple-600 hover:to-purple-800 hover:bg-clip-text">
+        Education & Certifications
+      </h2>
+    </div>
+        <div className="max-w-6xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-8">
+            
+            {/* Education Card */}
+            <div className="group p-8 rounded-3xl border-2 border-purple-200 dark:border-purple-800 hover:border-purple-500 dark:hover:border-purple-400 transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/40 bg-linear-to-br from-white/90 to-slate-50/90 dark:from-slate-900/95 dark:to-black/95 backdrop-blur-sm">
+              {/* Icon */}
+              <div className="flex items-center gap-4 mb-8">
+                <div className="w-14 h-14 rounded-xl bg-purple-500/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-7 w-7 text-purple-600 dark:text-purple-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path d="M12 14l9-5-9-5-9 5 9 5z" />
+                    <path d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" />
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222" />
+                  </svg>
+                </div>
+                <h2 className="text-3xl font-bold text-zinc-900 dark:text-white">Education</h2>
+              </div>
+
+              {/* Education Items */}
+              <div className="space-y-6">
+                {/* Bachelor Degree */}
+                <div className="border-l-4 border-purple-600 dark:border-purple-500 pl-6 hover:border-purple-500 dark:hover:border-purple-400 transition-colors duration-300">
+                  <h3 className="text-xl font-bold text-zinc-900 dark:text-white mb-2 group-hover:text-purple-600 dark:group-hover:text-purple-400 transition-colors">
+                    Bachelor of Computer Applications
+                  </h3>
+                  <p className="text-zinc-600 dark:text-gray-400 text-base">
+                    St. Aloysius College • 2026
+                  </p>
+                </div>
+
+                {/* 12th Grade */}
+                <div className="border-l-4 border-purple-600 dark:border-purple-500 pl-6 hover:border-purple-500 dark:hover:border-purple-400 transition-colors duration-300">
+                  <h3 className="text-xl font-bold text-zinc-900 dark:text-white mb-2 group-hover:text-purple-600 dark:group-hover:text-purple-400 transition-colors">
+                    12th Grade
+                  </h3>
+                  <p className="text-zinc-600 dark:text-gray-400 text-base">
+                    St. Aloysius PU College • 2023
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* Certifications Card */}
+            <div className="group p-8 rounded-3xl border-2 border-purple-200 dark:border-purple-800 hover:border-purple-500 dark:hover:border-purple-400 transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/40 bg-linear-to-br from-white/90 to-slate-50/90 dark:from-slate-900/95 dark:to-black/95 backdrop-blur-sm">
+              {/* Icon */}
+              <div className="flex items-center gap-4 mb-8">
+                <div className="w-14 h-14 rounded-xl bg-purple-500/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-7 w-7 text-purple-600 dark:text-purple-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                  </svg>
+                </div>
+                <h2 className="text-3xl font-bold text-zinc-900 dark:text-white">Certifications</h2>
+              </div>
+
+              {/* Certification Items */}
+              <div className="space-y-6">
+                {/* Google Data Analytics */}
+                <div className="border-l-4 border-purple-600 dark:border-purple-500 pl-6 hover:border-purple-500 dark:hover:border-purple-400 transition-colors duration-300">
+                  <h3 className="text-xl font-bold text-zinc-900 dark:text-white mb-2 group-hover:text-purple-600 dark:group-hover:text-purple-400 transition-colors">
+                    Google Data Analytics Professional Certificate
+                  </h3>
+                  <p className="text-zinc-600 dark:text-gray-400 text-base">
+                    Google • 2024
+                  </p>
+                </div>
+
+                {/* AWS Cloud Practitioner */}
+                <div className="border-l-4 border-purple-600 dark:border-purple-500 pl-6 hover:border-purple-500 dark:hover:border-purple-400 transition-colors duration-300">
+                  <h3 className="text-xl font-bold text-zinc-900 dark:text-white mb-2 group-hover:text-purple-600 dark:group-hover:text-purple-400 transition-colors">
+                    AWS Certified Cloud Practitioner
+                  </h3>
+                  <p className="text-zinc-600 dark:text-gray-400 text-base">
+                    Amazon Web Services • 2024
+                  </p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
       {/* Projects Section */}
 <section id="projects" className="py-20 px-6 relative z-10 bg-linear-to-br from-purple-50/60 via-white/60 to-purple-50/60 dark:from-purple-900/20 dark:via-black/40 dark:to-purple-900/20 backdrop-blur-sm shadow-xl shadow-purple-500/10 dark:shadow-purple-900/30">
   <div className="max-w-6xl mx-auto">
@@ -249,7 +346,7 @@ export default function Home() {
           </div>
 
           <div className="flex gap-6">
-            <a href="#" className="group/link text-zinc-900 dark:text-zinc-100 hover:text-purple-600 dark:hover:text-purple-400 font-semibold transition-all duration-300 hover:translate-x-2 flex items-center gap-1">
+            <a href="https://skillproof-ten.vercel.app" className="group/link text-zinc-900 dark:text-zinc-100 hover:text-purple-600 dark:hover:text-purple-400 font-semibold transition-all duration-300 hover:translate-x-2 flex items-center gap-1">
               View Project 
               <span className="group-hover/link:translate-x-1 transition-transform duration-300">→</span>
             </a>
@@ -291,7 +388,7 @@ export default function Home() {
           </div>
 
           <div className="flex gap-6">
-            <a href="#" className="group/link text-zinc-900 dark:text-zinc-100 hover:text-purple-600 dark:hover:text-purple-400 font-semibold transition-all duration-300 hover:translate-x-2 flex items-center gap-1">
+            <a href="https://kenet.vercel.app" className="group/link text-zinc-900 dark:text-zinc-100 hover:text-purple-600 dark:hover:text-purple-400 font-semibold transition-all duration-300 hover:translate-x-2 flex items-center gap-1">
               View Project 
               <span className="group-hover/link:translate-x-1 transition-transform duration-300">→</span>
             </a>
@@ -332,7 +429,7 @@ export default function Home() {
           </div>
 
           <div className="flex gap-6">
-            <a href="#" className="group/link text-zinc-900 dark:text-zinc-100 hover:text-purple-600 dark:hover:text-purple-400 font-semibold transition-all duration-300 hover:translate-x-2 flex items-center gap-1">
+            <a href="https://aloymni.in/" className="group/link text-zinc-900 dark:text-zinc-100 hover:text-purple-600 dark:hover:text-purple-400 font-semibold transition-all duration-300 hover:translate-x-2 flex items-center gap-1">
               View Project 
               <span className="group-hover/link:translate-x-1 transition-transform duration-300">→</span>
             </a>
