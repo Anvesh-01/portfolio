@@ -61,17 +61,18 @@ export default function Home() {
               <span className="relative z-10">Projects</span>
               <span className="absolute inset-x-0 -bottom-1 h-0.5 bg-linear-to-r from-purple-600 to-purple-800 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span>
             </a>
-            <ThemeToggle />
             <a 
               href="#contact" 
-              className="px-6 py-2 bg-linear-to-r from-purple-600 to-purple-800 text-white rounded-full hover:from-purple-700 hover:to-purple-900 hover:scale-110 hover:-translate-y-1 transition-all duration-300 shadow-lg shadow-purple-500/40 hover:shadow-xl hover:shadow-purple-500/60">
-              Contact
+              className="relative text-zinc-700 dark:text-zinc-300 hover:text-purple-600 dark:hover:text-purple-400 transition-all duration-300 hover:scale-125 hover:-translate-y-1 group"
+            >
+              <span className="relative z-10">Contact</span>
+              <span className="absolute inset-x-0 -bottom-1 h-0.5 bg-linear-to-r from-purple-600 to-purple-800 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span>
             </a>
+            <ThemeToggle />
           </div>
           
           {/* Mobile Menu */}
           <div className="md:hidden flex items-center gap-4">
-            <ThemeToggle />
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               className="text-zinc-700 dark:text-zinc-300 hover:text-purple-600 dark:hover:text-purple-400 transition-colors duration-300"
@@ -85,6 +86,7 @@ export default function Home() {
                 )}
               </svg>
             </button>
+            <ThemeToggle />
           </div>
         </div>
         
@@ -162,9 +164,9 @@ export default function Home() {
                   alt="Anvesh Rahul AK" 
                   width={400} 
                   height={400} 
-                  className="rounded-full object-cover w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 border-4 border-cyan-400/50 dark:border-cyan-500/60 shadow-2xl shadow-cyan-400/60 dark:shadow-cyan-500/80 hover:shadow-cyan-500/90 dark:hover:shadow-cyan-400/90 hover:scale-105 hover:rotate-3 transition-all duration-500 cursor-pointer"
+                  className="rounded-full object-cover w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 border-4 border-purple-400/50 dark:border-purple-500/60 shadow-2xl shadow-purple-400/60 dark:shadow-purple-500/80 hover:shadow-purple-500/90 dark:hover:shadow-purple-400/90 hover:scale-105 hover:rotate-3 transition-all duration-500 cursor-pointer"
                 />
-                <div className="absolute inset-0 rounded-full bg-linear-to-br from-cyan-400/5 to-blue-500/5 dark:from-cyan-500/8 dark:to-blue-400/8 group-hover:from-cyan-400/10 group-hover:to-blue-500/10 dark:group-hover:from-cyan-500/12 dark:group-hover:to-blue-400/12 transition-all duration-500"></div>
+                <div className="absolute inset-0 rounded-full bg-linear-to-br from-purple-400/5 to-purple-600/5 dark:from-purple-500/8 dark:to-purple-700/8 group-hover:from-purple-400/10 group-hover:to-purple-600/10 dark:group-hover:from-purple-500/12 dark:group-hover:to-purple-700/12 transition-all duration-500"></div>
               </div>
             </div>
           </div>
@@ -504,9 +506,8 @@ export default function Home() {
             I'm always interested in hearing about new projects and opportunities.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-            <a href="mailto:anveshrahulak105@gmail.com" className="group relative px-10 py-4 bg-linear-to-r from-purple-600 to-purple-800 text-white rounded-full font-semibold hover:from-purple-700 hover:to-purple-900 transition-all duration-300 hover:scale-110 hover:-translate-y-1 shadow-2xl shadow-purple-500/50 hover:shadow-purple-600/70 active:scale-100">
+            <a href="mailto:anveshrahulak105@gmail.com" className="group relative px-10 py-4 border-2 border-purple-500 dark:border-purple-500 text-purple-700 dark:text-purple-300 rounded-full font-semibold hover:bg-purple-600 dark:hover:bg-purple-700 hover:text-white hover:border-purple-700 transition-all duration-300 hover:scale-110 hover:-translate-y-1 shadow-xl shadow-purple-500/30 hover:shadow-2xl hover:shadow-purple-600/50 active:scale-100">
               <span className="relative z-10">Send Email</span>
-              <div className="absolute inset-0 rounded-full bg-white/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
             </a>
             <a href="https://www.linkedin.com/in/anvesh-rahul-a-k-45655b31b" target="_blank" rel="noopener noreferrer" className="group relative px-10 py-4 border-2 border-purple-500 dark:border-purple-500 text-purple-700 dark:text-purple-300 rounded-full font-semibold hover:bg-purple-600 dark:hover:bg-purple-700 hover:text-white hover:border-purple-700 transition-all duration-300 hover:scale-110 hover:-translate-y-1 shadow-xl shadow-purple-500/30 hover:shadow-2xl hover:shadow-purple-600/50 active:scale-100">
               <span className="relative z-10">LinkedIn</span>
