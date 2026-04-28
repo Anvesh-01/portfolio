@@ -482,7 +482,7 @@ export default function Home() {
           </div>
 
           <div className="flex gap-6">
-            <a href="https://aloymni.in/" className="group/link text-zinc-900 dark:text-zinc-100 hover:text-purple-600 dark:hover:text-purple-400 font-semibold transition-all duration-300 hover:translate-x-2 flex items-center gap-1">
+            <a href="https://aloymni.vercel.app/" className="group/link text-zinc-900 dark:text-zinc-100 hover:text-purple-600 dark:hover:text-purple-400 font-semibold transition-all duration-300 hover:translate-x-2 flex items-center gap-1">
               View Project 
               <span className="group-hover/link:translate-x-1 transition-transform duration-300">→</span>
             </a>
