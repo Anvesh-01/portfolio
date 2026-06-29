@@ -411,6 +411,47 @@ export default function Home() {
         </div>
       </div>
 
+       {/* StratPulse */}
+      <div className="group rounded-3xl overflow-hidden border-2 border-purple-200 dark:border-purple-800 hover:border-purple-500 dark:hover:border-purple-400 hover:shadow-2xl hover:shadow-purple-500/50 transition-all duration-500 hover:scale-105 hover:-translate-y-4 bg-white dark:bg-black">
+        <div className="h-56 bg-linear-to-br from-purple-500 via-purple-600 to-purple-700 group-hover:from-purple-600 group-hover:via-purple-700 group-hover:to-purple-800 transition-all duration-500 relative overflow-hidden flex items-center justify-center">
+          <Image 
+            src="/Gemini_Generated_Image_i2vygti2vygti2vy.png" 
+            alt="StratPulse Logo" 
+            width={192} 
+            height={192} 
+            className="object-contain w-3/4 h-3/4 group-hover:scale-110 transition-transform duration-500"
+          />
+          <div className="absolute inset-0 bg-linear-to-r from-transparent via-white/30 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
+        </div>
+        <div className="p-7">
+          <h3 className="text-2xl font-bold text-zinc-900 dark:text-zinc-100 mb-3 group-hover:text-purple-600 dark:group-hover:text-purple-400 transition-colors duration-300">
+            StratPulse
+          </h3>
+          <p className="text-zinc-600 dark:text-zinc-400 mb-5 leading-relaxed group-hover:text-zinc-900 dark:group-hover:text-zinc-300 transition-colors">
+           StratPulse is a real-time, AI-powered Brand Sentiment Analysis and Strategy Generator. It empowers marketing teams, PR professionals, and brand managers to 
+           monitor news coverage, evaluate public sentiment instantly, and generate immediate, actionable response strategies using Google's Gemini models.
+          </p>
+
+          <div className="flex gap-2 flex-wrap mb-5">
+            <span className="px-4 py-1.5 bg-purple-100 dark:bg-purple-900 text-purple-700 dark:text-purple-300 rounded-full text-sm font-medium hover:scale-110 hover:bg-purple-200 dark:hover:bg-purple-800 transition-all duration-200 cursor-pointer">Next.js</span>
+            <span className="px-4 py-1.5 bg-purple-100 dark:bg-purple-900 text-purple-700 dark:text-purple-300 rounded-full text-sm font-medium hover:scale-110 hover:bg-purple-200 dark:hover:bg-purple-800 transition-all duration-200 cursor-pointer">Recharts or Tremor</span>
+            <span className="px-4 py-1.5 bg-purple-100 dark:bg-purple-900 text-purple-700 dark:text-purple-300 rounded-full text-sm font-medium hover:scale-110 hover:bg-purple-200 dark:hover:bg-purple-800 transition-all duration-200 cursor-pointer">NextAuth.js</span>
+            <span className="px-4 py-1.5 bg-purple-100 dark:bg-purple-900 text-purple-700 dark:text-purple-300 rounded-full text-sm font-medium hover:scale-110 hover:bg-purple-200 dark:hover:bg-purple-800 transition-all duration-200 cursor-pointer">GNews API</span>
+          </div>
+
+          <div className="flex gap-6">
+            <a href="https://strat-pulse.vercel.app/" className="group/link text-zinc-900 dark:text-zinc-100 hover:text-purple-600 dark:hover:text-purple-400 font-semibold transition-all duration-300 hover:translate-x-2 flex items-center gap-1">
+              View Project 
+              <span className="group-hover/link:translate-x-1 transition-transform duration-300">→</span>
+            </a>
+            <a href="https://github.com/Anvesh-01/StratPulse" target="_blank" rel="noopener noreferrer" className="group/link text-zinc-600 dark:text-zinc-400 hover:text-purple-600 dark:hover:text-purple-400 font-semibold transition-all duration-300 hover:translate-x-2 flex items-center gap-1">
+              GitHub 
+              <span className="group-hover/link:translate-x-1 transition-transform duration-300">→</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
       {/* ResQNet */}
       <div className="group rounded-3xl overflow-hidden border-2 border-purple-200 dark:border-purple-800 hover:border-purple-500 dark:hover:border-purple-400 hover:shadow-2xl hover:shadow-purple-500/50 transition-all duration-500 hover:scale-105 hover:-translate-y-4 bg-white dark:bg-black">
         <div className="h-56 bg-linear-to-br from-purple-600 via-purple-700 to-purple-800 group-hover:from-purple-700 group-hover:via-purple-800 group-hover:to-purple-900 transition-all duration-500 relative overflow-hidden flex items-center justify-center">
