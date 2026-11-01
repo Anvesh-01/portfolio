@@ -297,13 +297,23 @@ export default function Home() {
 
               {/* Education Items */}
               <div className="space-y-6">
+                {/* Master's Degree */}
+                <div className="border-l-4 border-purple-600 dark:border-purple-500 pl-6 hover:border-purple-500 dark:hover:border-purple-400 transition-colors duration-300">
+                  <h3 className="text-xl font-bold text-zinc-900 dark:text-white mb-2 group-hover:text-purple-600 dark:group-hover:text-purple-400 transition-colors">
+                    Master of Computer Applications
+                  </h3>
+                  <p className="text-zinc-600 dark:text-gray-400 text-base">
+                    Dayanand Sagar Academy of Technology and Management, Bangalore • 2028
+                  </p>
+                </div>
+
                 {/* Bachelor Degree */}
                 <div className="border-l-4 border-purple-600 dark:border-purple-500 pl-6 hover:border-purple-500 dark:hover:border-purple-400 transition-colors duration-300">
                   <h3 className="text-xl font-bold text-zinc-900 dark:text-white mb-2 group-hover:text-purple-600 dark:group-hover:text-purple-400 transition-colors">
                     Bachelor of Computer Applications
                   </h3>
                   <p className="text-zinc-600 dark:text-gray-400 text-base">
-                    St. Aloysius College • 2026
+                    St. Aloysius (Autonomous) College • 2026
                   </p>
                 </div>
 
@@ -313,7 +323,7 @@ export default function Home() {
                     12th Grade
                   </h3>
                   <p className="text-zinc-600 dark:text-gray-400 text-base">
-                    St. Aloysius PU College • 2023
+                    St. Aloysius Pre-University College • 2023
                   </p>
                 </div>
               </div>
